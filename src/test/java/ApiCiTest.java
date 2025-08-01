@@ -1,10 +1,11 @@
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class ApiCiTest {
     @Test
-    public void should() {
+    public void shouldReturnData() {
         // Given - When - Then
         // Предусловия
         given()
@@ -16,7 +17,7 @@ public class ApiCiTest {
         // Проверки
                 .then()
                 .statusCode(200)
-                .body(/* --> ваша проверка здесь <-- */)
+                .body("data",equalTo("my data")) //получаем данные из поля data
         ;
     }
 }
