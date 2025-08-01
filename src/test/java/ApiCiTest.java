@@ -17,7 +17,7 @@ public class ApiCiTest {
         // Проверки
                 .then()
                 .statusCode(200)
-                .body("data",equalTo("my data")) //получаем данные из поля data
+                .body("data",equalTo("some data")) //получаем данные из поля data
         ;
     }
 }
